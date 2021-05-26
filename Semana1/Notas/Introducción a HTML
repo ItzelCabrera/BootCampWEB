@@ -1,0 +1,38 @@
+Introducción a HTML
+
+*HyperText Markup Language 
+*Proporciona estructura y contenido 
+*HTML no es un lenguaje de programación
+*Elementos: 
+	+<nombreElemento>
+	+definen la estrucura de la página web
+	+Ejemplos:
+		<a>
+		<div>
+		<span>
+		<strong>
+		<em>
+*Etiquetas
+	+<elemento> --> etiqueta
+	+Existen las self closing tags
+	+Ejemplos:
+		<br>
+		<embed>
+		<hr>
+		<img>
+		<input>
+		<link>
+		<meta>
+		<param>
+		<source>
+		<wbr>
+*Atributos
+	+Los atributos proporcionan información adicional de un elemento
+	+Se definen en la etiqueta de entrada
+	+Básicos:
+		id: identifica el elemento
+		atributo de clase: clasifica un elemento
+		src: especifica una fuente para contenido inscrustable
+		href: proporciona referencia a un hipervinculo
+	+Ejemplo:
+		<a href="https://www.google.com/">Un link</a>
