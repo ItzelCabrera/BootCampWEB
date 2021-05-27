@@ -1,6 +1,7 @@
 Introducción a HTML
 
 *HyperText Markup Language 
+*An Plain Text con .html
 *Proporciona estructura y contenido 
 *HTML no es un lenguaje de programación
 *Elementos: 
@@ -30,9 +31,37 @@ Introducción a HTML
 	+Los atributos proporcionan información adicional de un elemento
 	+Se definen en la etiqueta de entrada
 	+Básicos:
-		id: identifica el elemento
-		atributo de clase: clasifica un elemento
+		id: identifica el elemento (los valores del atributo id solo se pueden usar una vez por página; hay que reservarlo para elementos significativos)
+		atributo de clase: clasifica un elemento; un atributo de clase 		puede tener más de un valor,estos valores se separan por 		espacios en blanco
 		src: especifica una fuente para contenido inscrustable
 		href: proporciona referencia a un hipervinculo
 	+Ejemplo:
 		<a href="https://www.google.com/">Un link</a>
+
+*Semántica: 
+	+dar al contenido de la página un significado y una estructura
+*Elementos en bloque vs elementos en línea:
+	+Div y Span
+	+Div: me maneja en bloque y me da "saltos de línea"
+	+Span: me lo maneja todo en línea
+	+Ejemplo:
+		<!-- BLOQUE MEDIANTE DIV -->
+	    <div class="social">
+	      <p>Me encuentras en.</p>
+	      <p>Y también, tengo un perfil en...</p>
+	    </div>
+
+	    <!-- LINEA MEDIANTE SPAN -->
+	    <p>Pronto estaremos <span class="tooltip">escribiendo HTML</span> como los mejores desarrolladores.</p>
+*Hipervínculo
+	+Mediante el elemento <a>
+	+Ejemplos
+		<a href = "[URL]" target = "_blank">[NombreElemento]</a>
+
+		<a href="mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you">Email Me</a>
+*Estructura de un html
+	+Alternativa a los div
+	+Estructuras
+		<header>, <nav>, <article>, <section>, <aside> y <footer>.
+    
+  

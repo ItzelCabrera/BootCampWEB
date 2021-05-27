@@ -1,4 +1,103 @@
 Introducción a CSS
 
 *Proporciona apariencia 
+*Cae en cascada de arriba hacia abajo
 *CSS no es un lenguaje de programación
+*Selectores:
+	+Designa a que elementos del html apuntar y aplicar estilos
+	+Generalmente apuntan a un valor de atributo o a un tipo de elemento
+	+p { ... }
+	+Clasificación:
+		-Selectores de tipo: 
+			! apuntan a un tipo de elementos
+			! Ejemplo:
+				CSS
+				div { ... }
+
+				HTML
+				<div>...</div>          
+				<div>...</div>
+
+		-Selectores de clase: 
+			! Seleccionan un grupo de elementos 
+			! Seleccionan en función del valor del atributo de clase
+			! Ejemplo:
+				CSS
+				.awesome{ }
+
+				HTML
+				<div class = "awesome">...</div>
+				<p class = "awesome">...</p>
+		-Selectores de ID:
+			! Apuntan a un solo elemento
+			! Ejemplo:
+				CSS
+				#dscipnupiita { ... }
+
+				HTML
+				<div id="dscipnupiita">...</div>
+*Propiedades:
+	+Una vez seleccionado algo, se determinan las propiedades que se quieran estilizar (color, tamaño,fuente,...)
+	+Sintaxis
+		p{
+		propiedad1:...
+		propiedad2:...
+		...
+		propiedadN:...
+		}
+	+Ejemplo: 
+		p {
+		  color: ...;
+		  font-size: ...;
+		}
+*Valores: los valores que toman las propiedades
+	+Ejemplo:
+		p {
+		  color: orange;
+		  font-size: 16px;
+		}
+*OBS: como buena practica, se deben tener por separado los archivos de html y css
+
+*Incluir el CSS
+	+Dentro del html se debe hacer referencia la css; esto desde el elemento head. 
+	+Como buena práctica hay que incluir todos los estilos en una sola hoja de estilo externa.
+	+Ejemplo:
+		<!-- index.html -->
+		<head>
+		  <link rel="stylesheet" href="main.css">
+		</head>
+*RESETS:
+	+Cada navegador tiene sus propios estilos predeterminados para css
+	+Para garantizar la compatibilidad se utilizan los resets
+	+El reseteo debe ir al inicio para asegurar que sea lo primero que se ajuste
+*La cascada
+	+De la parte superior a la inferior
+	+Permite agregar o sobreescribir diferentes estilos a medida que avanza la hoja de estilo 
+*Combinar selectores
+	+ESPECIFICA el elemento o grupo de elementos que nos gustaría seleccionar
+	+Es como si se estuviera anidando; el que está más a la derecha es el más anidado
+	+Ejemplo:
+		.hotdog p {
+		  background: brown;
+		}
+		.hotdog p.mustard {
+		  background: yellow;
+		}
+*Modularizar mediante clases
+	+Sirve para superponer diferentes estilos; esto se puede lograr mediante la modularización con clases
+	+Ejemplo:
+		<a class="btn btn-danger">...</a>
+		<a class="btn btn-success">...</a>
+		Copy
+		.btn {
+		  font-size: 16px;
+		}
+		.btn-danger {
+		  background: red;
+		}
+		.btn-success {
+		  background: green;
+		}
+
+
+

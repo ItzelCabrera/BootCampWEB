@@ -1,0 +1,22 @@
+.main-header{
+    background-color: aqua;
+}
+
+.main-header .nav ol{
+    list-style: none;
+}
+
+.main-header .nav a{
+    text-decoration: none;
+    color: wheat;
+}
+
+.main-header .hero h1{
+    text-align: center;
+}
+
+.btn{
+    border: black 1px solid;
+    padding : 10px;
+    border-radius: 5px;
+}

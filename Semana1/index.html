@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!Meta Informacion>
+    <!--Meta Informacion-->
     <meta charset="utf-8">
     <title>Hola Mundo!</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
   </head> 
   <body>
-      <!Comentario>
-    <h1>Mi primera página web!</h1>
-    <h2>Esto es un H2</h2>
+      <!--Comentario-->
+    <h1 class = "dsc">Mi primera página web!</h1>
+    <h2 class = "dsc">Esto es un H2</h2>
     <h6>Esto es un H2</h6>
-    <p>Desde el bootcamp DSC</p>
+    <p id = "descripcion">Desde el bootcamp DSC</p>
+    <a href = "https://bootcamp-desarrollo-web.vercel.app/docs/week1/02-html-css">Un link</a>
     <img src="https://seojake.com/wp-content/uploads/2017/05/when-people-dont-close-html-elements-meme.jpg" alt="Título alternativo de la imagen">
+    <!-- BLOQUE MEDIANTE DIV -->
+    <div class="social">
+      <p>Me encuentras en.</p>
+      <p>Y también, tengo un perfil en...</p>
+    </div>
+    <!-- LINEA MEDIANTE SPAN -->
+    <p>Pronto estaremos <span class="tooltip">escribiendo HTML</span> como los mejores desarrolladores.</p>
+    
+    <div>
+      <p><a href = "about.html">About</a></p>
+      <p><a href = "https://github.com/AntonioRM1231/Proyecto-BelBaalam"> Repo Beel_Balam</a> </p>
+    </div>
+    <!--Me abre otra página-->
+    <a href = "http://shayhowe.com/" target = "_blank">Shay Howe</a>
+    <!--Manda un correo electronico-->
+    <a href="mailto:shay@awesome.com?subject=Reaching%20Out&body=How%20are%20you">Email Me</a>
+    <!--Me manda a arriba/abajo de la misma página
+    puedo hacer referencia a un id-->
+    <body id="top">
+      ...
+      <a href="#top">Back to top</a>
+      ...
+    </body>
   </body>
 </html>
