@@ -1,0 +1,65 @@
+NIVEL DE BLOCK (BLOCK)
+    *Ocupan cualquier ancho disponible
+    *Comienzan en una nueva línea
+NIVEL EN LÍNEA (IN-LINE)
+    *Ocupan el ancho que requiere su contenido
+    *Se alinean en la misma línea, uno tras otro
+
+MODELO CAJA
+    *Cada elemento de una página es una caja rectangular
+    *Partes:
+        +Content Box:
+            área donde se muestra el contenido
+            se dimensiona con las propiedades weight and height
+        +Padding Box:
+            el relleno se colocar alrededor del contenido
+            se controla mediante padding y sus propiedades
+        +Border Box:
+            Envuelve el conentenido y el relleno
+            Se modifican sus propiedades mediante border
+        +Margin Box:
+            capa más externa
+            se controla mediante margin
+    *Top-Right-Bottom-Left
+        +margin-top
+        +margin-right
+        +margin-bottom
+        +margin-left
+        indiv
+        +border-top
+        +border-right
+        +border-bottom
+        +border-left
+        todos los lados
+        border-width
+        +border-style
+        +border-color
+        +border-top-width
+        +border-top-style
+        +border-top-color
+        +border-right-width
+        +border-right-style
+        +border-right-color
+        +border-bottom-width
+        +border-bottom-style
+        +border-bottom-color
+        +border-left-width
+        +border-left-style
+        +border-left-color
+        +border-radius
+            1 solo valor, redondea las 4 esquinas de un elemento por igual
+            2 valores, redondea sup_izq/inf_der y sup_der/inf_izq
+            4 valores, sup_izq/sup_der/inf_der/inf_izq
+        +padding-top
+        +padding-right
+        +padding-bottom
+        +padding-left
+    *Box sizing:
+        Permite que cualquier ancho sea el ancho del cuadro visible 
+        Ejemplo:
+            .box {
+            box-sizing: border-box;
+            } 
+
+    https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model
+    

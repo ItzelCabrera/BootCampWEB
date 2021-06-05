@@ -1,0 +1,141 @@
+LAYOUTS
+
+    *Elegir el metodo de diseño suele ser dificil, incluso es posible que se necesite más 
+    de un metodo de diseño
+
+    *Display: 
+        +determina si la caja a la que se aplica actua como en línea o en bloque 
+            -en línea: en dirección de línea;los elementos <span> y <strong> están predeterminados
+            para tener un display en línea;no se establece ancho y alto de forma explícita;los ele
+            mentos circundantes ignoran cualquier margen y relleno a nivel de bloque
+            -en bloque: no se acomodan uno junto al otro;por default , abarca todo el ancho en 
+            un modo de escritura horizontal; se respeta el margen en todos los lados de un elemento
+            de un bloque 
+        +determina como deben comportarse los hijos de un elemento
+            Por ejemplo, establecer la propiedad en display: flex convierte la caja en una caja
+            de nivel de bloque y también convierte sus elementos secundarios en elementos flex. 
+            Esto habilita las propiedades flex que controlan la alineación, el orden y el flujo.
+    
+    *Flexbox: 
+        +para diseños unidimensionales (horizontalmente o verticalmente)
+        +Predeterminada: alinea los elementos hijos en dirección en línea y los estira 
+        en dirección en bloque (para que tengan la misma altura). Todos los elementos hijos
+        permaneceran en la misma línea y se ajustarán de tal forma que todos quepan ahí
+        +El comportamiento predeterminado se ajusta con align-items (eje que cruza), justify-content (eje principal) y flex-wrap
+            //Forma rústica
+            align-items: center;
+            align-items: end;
+            justify-content:space-around
+            justify-content:space-between
+            justify-content:space-evenly
+        +convierte los elementos hijos en elementos flexibles,es decir, escribe reglas de como
+        se comportan dentro de un contenedor flexible
+            display:flex;
+            flex-direction: <row,column,row-reverse,column-reverse> 
+            //al usar row/column reverse, el end y start tambien se alteran
+            align-items:flex-end
+            align-items:flex-star
+            align-items:center
+            justify-content:flex-end
+            justify-content:flex-star
+            justify-content:center
+        +flex-grow, flex-shrink y flex-base
+        +Propiedad order: para elementos individuales; por defecto tienen valor 0; se puede cambiar
+        a un valor positivo o negativo
+        +Propiedad align-self: para elementos individuales; acepta mismos valores que align-items
+        +Propiedad  flex-wrap: especifica si los elementos flex son forzados en una sola línea
+        o pueden ser envueltos en multiples lineas
+            nowrap: cada elemento se ajusta en una sola linea
+            wrap: los elementos se envuelven alrededor de lineas adicionales
+            wrap-reverse: los elementos se envuelven alrededor de lineas adicionales en reversa
+        +Porpiedad flex-grow: dado que usualmente se usan en conjunto las propiedades flex-direction
+        y flex-wrap, flex-grow es la unión de esta;
+        como valor se toma flex-fow : <valor de flex-dir> <valor de flex-wrap>
+        +Propiedad align-content: determina el espacio entre las lineas; la diferencia con
+        align-items es que la ultima determina como los elementos en su conjunto estan alineados
+        dentro del contenedor
+            -flex-start: Las líneas se posicionan en la parte superior del contenedor.
+            -flex-end: Las líneas se posicionan en la parte inferior del contenedor.
+            -center: Las líneas se posicionan en el centro (verticalmente hablando) del contenedor.
+            -space-between: Las líneas se muestran con la misma distancia entre ellas.
+            -space-around: Las líneas se muestran con la misma separación alrededor de ellas.
+            -stretch: Las líneas se estiran para ajustarse al contenedor.
+        https://flexboxfroggy.com/#es
+    *Grid
+        +similar a flexbox, permite controlar dos ejes
+        +usando display:grid;
+        +Grid item: es aquel elemento que es directamente hijo del grid container
+            .container {
+            display: grid;
+            }
+
+            <div class="container">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            </div>
+
+            De forma automática, los hijos items directos se posicionan en cada celda
+
+        +Grid Lines: horizontales y verticales. Van de 1 a n+1, donde n es el numero de col o
+        renglones. El conteo depende del modo de escritura y de la dirección del componente.
+        +Grid tracks: espacio entre dos grid lines. Está la column track y el row track. Al crear
+        el grid se crean los tracks al asignar tamaño a cada uno
+        +Grid cells: itersección entre una column track y una row track. Por default, al definir
+        un grid, los items se localizan uno en cada celda.
+        +Grid area: varias celdas juntas. Estas areas se crean al hacer que un item abarque
+        varios tracks
+        +Gaps: callejon entre los tracks. No se pueden agregar contenido a los gaps pero los
+        elementos grid pueden abarcar cierto espacio del gap.
+        +Sintaxis
+            .container {
+                display: grid;
+                grid-template-columns: <tamCTrack1> <tamCTrack2> <tamCTrackN>;
+                grid-template-rows: <tamRTrack1> <tamRTrack2> <tamRTrackN>;
+                gap: <tamGap>;
+            }
+        +fr, unidad de medida especial para grid: asigna una porción del espacio disponible.
+            Ejemplo: si se tiene dos elementos y se establecen a 1fr y 3fr respectivamente, en
+            tonces el espacio se divide en 4 y el primer elemento ocupa 1/4 y el segundo 3/4.
+            -Si se utilizan otras medidas, el esapcio restante se divide con fr
+        +Para especificar el ancho/alto de Track
+            grid-template-columns: <tamCTrack1> <tamCTrack2> <tamCTrackN>;
+            grid-template-rows: <tamRTrack1> <tamRTrack2> <tamRTrackN>;
+            gap: <tamGap>;
+            -Tambien se puede usar el repeat(<numCols>,<tam>)
+        +Para especificar la posicion de un grid item se usa 
+            grid-column-start: <GridLineaStart>
+            grid-row-start: <GridLineaStart>
+            grid-column-end : <GridLineEnd>
+            grid-row-end: <GridLineEnd>
+            -El valor de GridLineEnd no debe ser siempre mayor que GridLineStart.De esta forma
+            se especifica de derecha a izquierda
+            -Asi mismo, se pueden usar valores negativos
+            -Otra forma de especificar donde termina/inicia es indicando el numero de lineas que abarca,
+            esto mediante el uso de 
+                grid-column-end/start:span<numLineas>
+                grid-row-end/start:span<numLineas>
+            -Para ahorra codigo, se puede usar la siguiente estructura
+                grid-column: <lineaInicio>/<lineaFinal>
+                grid-row: <lineaInicio>/<lineaFinal>
+                rid-column: <lineaInicio>/span <lineaFinal>
+                grid-row: <lineaInicio>/span <lineaFinal>
+            -Otra forma es usando grid-area: <grid-row-start>/<grid-column-start>/<grid-row-end>/<grid-column-end>
+            -Por default, los elementos de la cuadrícula se colocan de acuerdo al orden en el 
+            codigo fuente. Y se puede sobreescribir usando "order",se le puede asignar valores
+            negativos y positivos, por defecto: order tiene valor de 0.
+        +Intrinsic sizing keywords
+            grid-template-columns : <intrinsic sizing keywords>
+            
+            -min-content: hará el track tan pequeño como sea posible sin que el contenido
+            se salga del track
+            -max-content: el track se anchará lo más posible haciendo que el contenido aparezca
+            en una sola linea, sin cortes
+            -fit-content(<tam>): al principio actua como max-content, pero cuando el track alcance
+            el tamaño que se le pasa como parametro, entonces empezará a actuar como wrap
+    *Positioning
+        +modifica el comportamiento del flujo normal del documento y como se relaciona con 
+        otros elementos
+        +Sintaxis   
+            position: <valores>
+        +Valores: relative,absolute,fixed,stick y static (por default)

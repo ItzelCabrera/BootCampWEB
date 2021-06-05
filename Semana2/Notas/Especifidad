@@ -1,0 +1,23 @@
+Especifidad
+    *Decidir que VALORES de una propiedad CSS son más relevantes para un elemento, para 
+    ser aplicados
+    *Es un peso que se le asigna a una declaración de CSS.
+    *Sólo se aplica cuando el mismo elemento es objetivo de multiples declaraciones
+    *Si un elemento es objeto de una declaración directa, esta tiene preferencia sobre sobre
+    las reglas heredadas de su ancestro
+    *¿Cómo se calcula? 
+        +Se determina por el número correspondiente de cada tipo de selector.
+        +Cuando varias declaraciones tienen la misma especifidad,se apliacará al elemento 
+        la ultima declaración encontrada en el CSS
+        + De mayor especifidad a menor especifidad:
+            Style attribute--> ID--> Class,pseudo-class,attribute-->Elements
+        
+            Si el elemento tiene estilo en línea, automáticamente gana (1,0,0,0 puntos)
+            Para cada valor de ID, aplique 0,1,0,0 puntos
+            Para cada valor de clase (o pseudoclase o selector de atributo), aplique 0,0,1,0 puntos
+            Para cada referencia de elemento, aplique 0,0,0,1 punto
+
+https://web.dev/learn/css/specificity/
+Specificy calculator: https://specificity.keegan.st/
+https://developer.mozilla.org/es/docs/Web/CSS/Specificity
+https://css-tricks.com/specifics-on-css-specificity/
