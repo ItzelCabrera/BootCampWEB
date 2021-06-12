@@ -1,0 +1,74 @@
+*JS paradigma simple basado en Objetos
+
+*Para llamar a nuestro archivo javascript en el head, usamos la siguiente etiqueta
+    +<script src="script.js" defer></script>:es necesario que lleve el atributo "defer", ya 
+    que esto permite que se cargue la página y al mismo tiempo se carguen los scripts. De esta
+    forma, los scripts se ejecutan en orden en que fueron posicionados en el head.
+    +<script async src="script.js"></script>: significa que el script es totalmente independiente.
+    Cargan en segundo plano y se ejecutan cuando esten listos.Load-first-order
+
+*DOM
+    Con ayuda de javascript podemos manipular el DOM de nuestra página web, creando, eliminando,
+     modificando o simplemente leyendo la información que vive en el.
+
+    const fieldFirstName = document.getElementById("firstName");
+    fieldFirstName.innerHTML = 'Juan'
+
+*Loops
+    +Do-while
+    +while
+    +for
+*funciones
+    +Como declaracion
+        function sum(a, b) {
+            return a + b;
+        }
+    +Como expresión
+        const square = function(a, b) {
+        return a + b;
+        }
+    +Arrow Functions
+        const square = (a,b) => (a + b);
+*alert() --> nos muestra un mensaje de alerta
+
+*Arrays: 
+    +let array = [e1,e2,..,eN];
+    +Indexación <nombreArray>[<posicion>]
+    +Recorrer un array: 
+        -calls a function once for each element in an array, in order.  
+        -Sintaxis
+            <nombreArray>.forEach(myFunction);
+
+            function myFunction(item, index) {
+                //codigo
+            }
+    +https://www.w3schools.com/jsref/jsref_obj_array.asp
+
+*Objetos
+    +colección de propiedades (una propiedad es una asociación entre una clave y un valor
+    , a veces el valor puede ser una función --> metodo)
+    +Sintaxis
+        var myCar = {
+            propiedad1: valor1,
+            propiedad2: valor2,
+            ...,
+            propiedadN: valorN
+        };
+
+        var obj = new Object();
+        obj.propiedad1 = valor;
+        obj.propiedad2 = valor;
+        obj.propiedad3 = valor;
+
+    +Acceder a los valores de las propiedades
+        obj.propiedad1;
+        myCar["propiedad"];
+    +Llamar a los metodos
+        obj.<funcion>()
+    +Recorrer todo el Objeto
+        for (var i in obj) {
+            //codigo
+        }
+    +https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_Objects
+    
+

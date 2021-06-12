@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+body{
+    background-color: #24272e;
+    color:whitesmoke;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+}
+
+.title-section{
+    background-color: white;
+    color:#24272e;
+    padding: 1.5em;
+    text-align:center;
+    font-weight: bold;
+}
+.score-section{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:2em;
+}
+
+.board{
+    padding:3em;
+    border:2px solid white;
+    position:relative;
+    border-radius: 10px;
+}
+
+.badge{
+    background-color: rgb(211, 28, 59);
+    padding:0.25em;
+    border: 1px solid rgb(211, 28, 59);
+    border-radius: 7px;
+}
+
+.score-section .board #user{
+    position: absolute;
+    top:4em;
+    left:-1em;
+}
+
+.score-section .board #computer{
+    position: absolute;
+    top:4em;
+    right:-3em;
+}
+
+.score-section .board #score{
+    padding: 5px;
+    font-size: 60px;
+    display: flex;
+}
+
+.message-section{
+    text-align: center;
+    font-size: 50px;
+    padding:10px;
+}
+
+.choices{
+    padding: 5px;
+    display:flex;
+    justify-content: space-around;
+}
+
+.choice{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8em;
+}
+
+.win{
+    border-radius: 50%;
+    border: 5px solid rgb(28, 231, 9);  
+}
+
+.loose{
+    border-radius: 50%;
+    border: 5px solid rgb(211, 13, 13);  
+}
+
+.draw{
+    border-radius: 50%;
+    border: 5px solid #dff709;  
+}
+/*Cuando el cursor sobre las opciones*/
+.choice:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.order{
+    text-align: center;
+    padding:3em;
+    font-size: 2em;
+}
