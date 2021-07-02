@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href = "./CSS/styles.css">
+        <title>Rick & Morty API</title>
+        <script src = "https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script>
+        <script src="./index.js"defer></script>
+    </head> 
+    <body class ="bg-yellow-500 text-gray-200">
+        <h1 class = "font-bold text-4xl text-center my-8">BootCamp Desarrollo Web</h1>
+        <section class ="flex flex-col items-center">
+            <h2 class ="my-2 text-2xl">Lista de personajes de la serie Rick&Morty</h2>
+            <ul id = "list" class = "flex flex-wrap justify-center"></ul>
+        </section>
+        <div id ="observer"> </div>
+    </body>
+</html>

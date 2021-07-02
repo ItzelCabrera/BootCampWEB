@@ -1,0 +1,23 @@
+*¿Qué es una API?
+    -Es una forma de conectar programas de software
+    -Es un conjunto de reglas que define coo se comunican dos programas entre sí.
+    -El mediador entre los usuarios y los 
+    -Se puede pedir información de un programa, esta forma de pedir información está estan-
+    darizada, la más común actualmente se llama REST 
+    -REST: es un conjunto de límites de arquitectura. Cuando el cliente pide ciertos recursos,
+    se transfieren por medio de HTTP en varios formatos (JASON,HTML,Python,PHP,etc). Los enca-
+    bezados y parámetros de los métodos HTTP de una solicitud HTTP de la API de RESTful nos
+    indica información de identificación, autorización, uniform resources identity, cookies,etc.
+        -Criterios:
+            .Arquitectura cliente-servidor; gestión de solicitudes a través de HTTP.
+            .Comunicación entre el cliente y el servidor sin estado; implica que la info 
+            del cliente no se almacena entre las peticiones, cada petición es ind de otra
+            .Datos se pueden almacenar en caché; optimizando las interacciones
+            .Una interfaz uniforme entre los elementos; para que los datos se envíen de forma
+            estandarizada
+            .Un sistema en capas que organiza en jerarquías invisibles para el cliente cada uno
+            de los servidores 
+            .Código disponible según se solicite:enviar codigos ejecutables del servidor al cliente
+
+*Lazy-loading o infinityscroll:         
+Lista de APIS:https://apilist.fun

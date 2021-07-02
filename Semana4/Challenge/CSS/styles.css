@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+
+body{
+    background-color: #ff9d3f;
+    
+}
+
+header{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    line-height: 0ch;
+}
+
+.title{
+    font-family: 'Ubuntu Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#t1{
+    color: #97490a9d;
+    font-size: 60px;
+}
+
+#t2{
+    color: #ef6c00;
+    font-size: 59px;
+}
+.principal{
+    padding: 25px;
+}
+
+.subtitle{
+    font-family: 'Amatic SC', cursive;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #bb9f89;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    border: 8px solid #b53d00;
+    border-radius: 20px;
+    margin-left: 90px;
+    margin-right: 90px;
+    background-color:#b53d00;
+}
+
+.list{
+    font-family: 'Zen Loop', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+img{
+    border: 2px solid  #ff9d3f;
+    border-radius: 20px;
+}
+
